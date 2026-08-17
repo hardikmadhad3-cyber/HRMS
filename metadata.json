@@ -1,0 +1,6 @@
+{
+  "name": "Human Resource Management System (HRMS)",
+  "description": "Production-grade multi-company HRMS with Organization, Attendance, Leaves, Phase 4B Payroll Calculation Engine, and Phase 4C Transactional Payroll Finalization, Versioned Snapshots, Payroll Registers & ESS Payslips.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
