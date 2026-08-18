@@ -65,11 +65,18 @@ export class EmployeeAssignmentRepository {
   }
 
   public static async findDirectReports(managerId: string): Promise<string[]> {
+<<<<<<< HEAD
     const fromAssignments = Array.from(this.db.employeeAssignments.values())
       .filter((a) => a.managerId === managerId && !a.effectiveTo)
       .map((a) => a.employeeId);
 
     return Array.from(new Set(fromAssignments));
+=======
+    const activeAssignments = Array.from(this.db.employeeAssignments.values()).filter(
+      (a) => a.managerId === managerId && !a.effectiveTo
+    );
+    return activeAssignments.map((a) => a.employeeId);
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   }
 
   public static async getAllSubordinateIds(managerId: string): Promise<string[]> {

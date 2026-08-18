@@ -84,9 +84,12 @@ export class AuthService {
       PermissionKey.PERFORMANCE_VIEW,
       PermissionKey.EXPENSE_APPLY,
       PermissionKey.EXPENSE_APPROVE,
+<<<<<<< HEAD
       PermissionKey.ASSET_VIEW,
       PermissionKey.OFFBOARDING_VIEW,
       PermissionKey.OFFBOARDING_MANAGE,
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
       PermissionKey.PAYROLL_PAYSLIP_SELF_VIEW,
     ],
     [UserRole.PAYROLL_MANAGER]: [
@@ -101,7 +104,10 @@ export class AuthService {
       PermissionKey.PAYROLL_FINALIZE,
       PermissionKey.PAYROLL_PAYSLIP_SELF_VIEW,
       PermissionKey.EXPENSE_APPROVE,
+<<<<<<< HEAD
       PermissionKey.ASSET_VIEW,
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
       PermissionKey.REPORTS_VIEW,
     ],
     [UserRole.RECRUITER]: [
@@ -119,8 +125,11 @@ export class AuthService {
       PermissionKey.LEAVE_VIEW,
       PermissionKey.LEAVE_APPLY,
       PermissionKey.EXPENSE_APPLY,
+<<<<<<< HEAD
       PermissionKey.ASSET_VIEW,
       PermissionKey.OFFBOARDING_VIEW,
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
       PermissionKey.PAYROLL_VIEW,
       PermissionKey.PAYROLL_PAYSLIP_SELF_VIEW,
     ],
@@ -297,6 +306,7 @@ export class AuthService {
     return true;
   }
 
+<<<<<<< HEAD
   public static getPermissionsForRole(role: UserRole | string): PermissionKey[] {
     return this.rolePermissionsMap[role as UserRole] || [
       PermissionKey.ATTENDANCE_VIEW,
@@ -351,6 +361,8 @@ export class AuthService {
     }
   }
 
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   public static async getUsers(): Promise<AuthUser[]> {
     return this.users.map((u) => this.toAuthUser(u));
   }

@@ -49,6 +49,7 @@ import { PayslipsListPage } from './pages/payroll/PayslipsListPage.js';
 // Recruitment & Onboarding Module (Phase 5)
 import { RecruitmentHubPage } from './pages/recruitment/RecruitmentHubPage.js';
 
+<<<<<<< HEAD
 // Performance Management Module (Phase 6A)
 import { PerformanceHubPage } from './pages/performance/PerformanceHubPage.js';
 
@@ -59,6 +60,8 @@ import { AssetsHubPage } from './pages/assets/AssetsHubPage.js';
 // Offboarding Module (Phase 6C)
 import { OffboardingHubPage } from './pages/offboarding/OffboardingHubPage.js';
 
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 // Admin Pages
 import { UserManagementPage } from './pages/admin/UserManagementPage.js';
 import { RolesPermissionsPage } from './pages/admin/RolesPermissionsPage.js';
@@ -492,6 +495,7 @@ export default function App() {
                 element={<Navigate to="/recruitment?tab=onboarding" replace />}
               />
               <Route
+<<<<<<< HEAD
                 path="/performance"
                 element={
                   <ProtectedRoute requiredPermission={PermissionKey.PERFORMANCE_VIEW}>
@@ -530,11 +534,20 @@ export default function App() {
                   <ProtectedRoute requiredPermission={PermissionKey.EXPENSE_APPLY}>
                     <ExpensesHubPage />
                   </ProtectedRoute>
+=======
+                path="/performance/*"
+                element={
+                  <RoutePlaceholder
+                    title="Performance Management"
+                    description="Phase 5 scope — Review cycles, 360 feedback, goals & KPI tracking."
+                  />
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
                 }
               />
               <Route
                 path="/expenses/*"
                 element={
+<<<<<<< HEAD
                   <ProtectedRoute requiredPermission={PermissionKey.EXPENSE_APPLY}>
                     <ExpensesHubPage />
                   </ProtectedRoute>
@@ -548,11 +561,18 @@ export default function App() {
                   <ProtectedRoute requiredPermission={PermissionKey.ASSET_VIEW}>
                     <AssetsHubPage />
                   </ProtectedRoute>
+=======
+                  <RoutePlaceholder
+                    title="Expense Claims"
+                    description="Phase 5 scope — Travel & expense claim submissions and approvals."
+                  />
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
                 }
               />
               <Route
                 path="/assets/*"
                 element={
+<<<<<<< HEAD
                   <ProtectedRoute requiredPermission={PermissionKey.ASSET_VIEW}>
                     <AssetsHubPage />
                   </ProtectedRoute>
@@ -566,14 +586,27 @@ export default function App() {
                   <ProtectedRoute requiredPermission={PermissionKey.OFFBOARDING_VIEW}>
                     <OffboardingHubPage />
                   </ProtectedRoute>
+=======
+                  <RoutePlaceholder
+                    title="Asset Management"
+                    description="Phase 5 scope — Hardware & software asset allocation and tracking."
+                  />
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
                 }
               />
               <Route
                 path="/offboarding/*"
                 element={
+<<<<<<< HEAD
                   <ProtectedRoute requiredPermission={PermissionKey.OFFBOARDING_VIEW}>
                     <OffboardingHubPage />
                   </ProtectedRoute>
+=======
+                  <RoutePlaceholder
+                    title="Exit & Offboarding"
+                    description="Phase 5 scope — Resignation processing, exit interview & clearance."
+                  />
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
                 }
               />
             </Route>

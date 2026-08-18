@@ -11,13 +11,19 @@ export interface AuditLogEntry {
   action: string;
   targetModule: string;
   targetRecordId?: string;
+<<<<<<< HEAD
   targetEntityId?: string;
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   companyId: string;
   companyName?: string;
   timestamp: string;
   ipAddress?: string;
   userAgent?: string;
   changesSummary?: string;
+<<<<<<< HEAD
   previousState?: any;
   newState?: any;
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 }

@@ -105,6 +105,7 @@ import {
   OnboardingDocument,
   OnboardingDocStatus,
 } from '../../src/types/recruitment.js';
+<<<<<<< HEAD
 import {
   PerformanceCycle,
   PerformanceCycleType,
@@ -146,6 +147,8 @@ import {
   UserCompanyAccessEntry,
 } from '../../src/types/platform.js';
 import { PermissionKey, UserRole } from '../../src/types/auth.js';
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 
 export interface TenantScopedFilter {
   companyId: string;
@@ -247,6 +250,7 @@ export class RelationalDatabase {
   public onboardingTasks: Map<string, OnboardingTask> = new Map();
   public onboardingDocuments: Map<string, OnboardingDocument> = new Map();
 
+<<<<<<< HEAD
   // Phase 6A Performance Management Module
   public performanceReviewTemplates: Map<string, PerformanceReviewTemplate> = new Map();
   public performanceCycles: Map<string, PerformanceCycle> = new Map();
@@ -278,6 +282,8 @@ export class RelationalDatabase {
   public customRoles: Map<string, CustomRoleDefinition> = new Map();
   public userCompanyAccess: Map<string, UserCompanyAccessEntry> = new Map();
 
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   private constructor() {
     this.seedInitialMasterData();
   }
@@ -3190,6 +3196,7 @@ export class RelationalDatabase {
     this.onboardingDocuments.set(doc1.id, doc1);
     this.onboardingDocuments.set(doc2.id, doc2);
     this.onboardingDocuments.set(doc3.id, doc3);
+<<<<<<< HEAD
 
     // ==========================================
     // PHASE 6A: PERFORMANCE MANAGEMENT MASTER SEED
@@ -4250,6 +4257,8 @@ export class RelationalDatabase {
     for (const [id, h] of this.performanceReviewHistory.entries()) {
       if (h.reviewId === reviewId) this.performanceReviewHistory.delete(id);
     }
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   }
 
   public rollbackSalaryStructure(structureId: string): void {

@@ -41,14 +41,22 @@ export class AuditService {
     return newLog;
   }
 
+<<<<<<< HEAD
   public static getLogsForCompany(companyId?: string): AuditLogEntry[] {
     if (companyId && companyId !== 'ALL') {
+=======
+  public static async getLogs(companyId?: string): Promise<AuditLogEntry[]> {
+    if (companyId) {
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
       return AuditService.logs.filter((l) => l.companyId === companyId || l.companyId === 'ALL');
     }
     return AuditService.logs;
   }
+<<<<<<< HEAD
 
   public static async getLogs(companyId?: string): Promise<AuditLogEntry[]> {
     return AuditService.getLogsForCompany(companyId);
   }
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 }

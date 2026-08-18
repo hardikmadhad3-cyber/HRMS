@@ -32,6 +32,7 @@ import { PayslipRepository } from '../database/repositories/PayslipRepository.js
 import { PayrollPeriodSnapshotRepository } from '../database/repositories/PayrollPeriodSnapshotRepository.js';
 import { RecruitmentService } from '../services/RecruitmentService.js';
 import { OnboardingService } from '../services/OnboardingService.js';
+<<<<<<< HEAD
 import { PerformanceService } from '../services/PerformanceService.js';
 import { ReportService } from '../services/ReportService.js';
 import { NotificationService } from '../services/NotificationService.js';
@@ -39,6 +40,8 @@ import { AdminService } from '../services/AdminService.js';
 import { expenseRouter } from './expenseRoutes.js';
 import { assetRouter } from './assetRoutes.js';
 import { offboardingRouter } from './offboardingRoutes.js';
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 import { authMiddleware, AuthenticatedRequest, requirePermission } from '../middleware/authMiddleware.js';
 import { PermissionKey, UserRole } from '../../src/types/auth.js';
 
@@ -3443,6 +3446,7 @@ apiRouter.post('/onboarding/:id/handoff-employee', requirePermission(PermissionK
   return res.status(200).json({ success: true, data: result });
 });
 
+<<<<<<< HEAD
 // ==========================================
 // PHASE 6A: PERFORMANCE MANAGEMENT API ROUTES
 // ==========================================
@@ -3872,6 +3876,18 @@ apiRouter.get('/administration/audit', authMiddleware, requirePermission(Permiss
   };
   const result = await AdminService.queryAuditLogs(criteria);
   return res.json({ success: true, data: result });
+=======
+apiRouter.get('/administration/users', requirePermission(PermissionKey.ADMIN_USERS_MANAGE), async (req: AuthenticatedRequest, res: Response) => {
+  const users = await AuthService.getUsers();
+  return res.json({ success: true, data: users });
+});
+
+apiRouter.get('/administration/audit', requirePermission(PermissionKey.ADMIN_AUDIT_VIEW), async (req: AuthenticatedRequest, res: Response) => {
+  const isSuperAdmin = req.user?.role === UserRole.SUPER_ADMIN;
+  const filterCompany = isSuperAdmin ? undefined : req.user?.activeCompanyId;
+  const logs = await AuditService.getLogs(filterCompany);
+  return res.json({ success: true, data: logs });
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 });
 
 // Structured JSON Error Handling Middleware for apiRouter

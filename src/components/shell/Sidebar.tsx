@@ -138,11 +138,16 @@ export function Sidebar({ isOpen, onCloseMobile }: SidebarProps) {
       icon: Award,
       permission: PermissionKey.PERFORMANCE_VIEW,
       items: [
+<<<<<<< HEAD
         { label: 'Overview & Metrics', path: '/performance?tab=dashboard', permission: PermissionKey.PERFORMANCE_VIEW },
         { label: 'Appraisal Cycles', path: '/performance?tab=cycles', permission: PermissionKey.PERFORMANCE_VIEW },
         { label: 'Goals & KRAs', path: '/performance?tab=goals', permission: PermissionKey.PERFORMANCE_VIEW },
         { label: 'Appraisals', path: '/performance?tab=reviews', permission: PermissionKey.PERFORMANCE_VIEW },
         { label: 'Framework Templates', path: '/performance?tab=templates', permission: PermissionKey.PERFORMANCE_VIEW },
+=======
+        { label: 'Review Cycles', path: '/performance/cycles', permission: PermissionKey.PERFORMANCE_VIEW },
+        { label: 'Goals & KPIs', path: '/performance/goals', permission: PermissionKey.PERFORMANCE_VIEW },
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
       ],
     },
     {

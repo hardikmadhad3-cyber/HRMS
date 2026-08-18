@@ -9,14 +9,20 @@ import {
   Menu,
   LogOut,
   Check,
+<<<<<<< HEAD
   CheckCheck,
   ExternalLink,
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.js';
 import { UserRole } from '../../types/auth.js';
 import { apiClient } from '../../services/apiClient.js';
 import { Company } from '../../types/organization.js';
+<<<<<<< HEAD
 import { InAppNotification } from '../../types/platform.js';
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 
 interface TopBarProps {
   onToggleSidebar: () => void;
@@ -28,8 +34,11 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
   const [notifications, setNotifications] = useState<InAppNotification[]>([]);
   const [unreadCount, setUnreadCount] = useState<number>(0);
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   const [companies, setCompanies] = useState<Array<{ id: string; name: string; code: string }>>([
     { id: 'comp-101', name: 'Acme Enterprise Solutions', code: 'ACME' },
     { id: 'comp-102', name: 'Nexus Tech Global', code: 'NEXUS' },
@@ -39,7 +48,11 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
   const userMenuRef = useRef<HTMLDivElement>(null);
   const notifMenuRef = useRef<HTMLDivElement>(null);
 
+<<<<<<< HEAD
   // Fetch real companies & in-app notifications
+=======
+  // Fetch real companies from backend
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
   useEffect(() => {
     async function loadCompanies() {
       const res = await apiClient.get<Company[]>('/api/v1/organization/companies');
@@ -54,6 +67,7 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
       }
     }
     loadCompanies();
+<<<<<<< HEAD
     loadNotifications();
   }, [activeCompanyId, user?.id]);
 
@@ -101,6 +115,9 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
       console.error('Failed to mark all as read:', err);
     }
   };
+=======
+  }, []);
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
 
   // Click-outside listener to dismiss open dropdowns
   useEffect(() => {
@@ -149,7 +166,11 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
               Enterprise HRMS
             </h1>
             <span className="text-[10px] text-slate-500 font-medium tracking-wide uppercase">
+<<<<<<< HEAD
               Phase 7 Platform
+=======
+              Phase 1B Enterprise
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
             </span>
           </div>
         </div>
@@ -253,12 +274,16 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
               setShowNotifications((prev) => !prev);
               setShowCompanyMenu(false);
               setShowUserMenu(false);
+<<<<<<< HEAD
               loadNotifications();
+=======
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
             }}
             className="p-1.5 rounded-md text-slate-600 hover:bg-slate-100 relative cursor-pointer"
             aria-label="Notifications"
           >
             <Bell className="w-4 h-4" />
+<<<<<<< HEAD
             {unreadCount > 0 && (
               <span className="absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-red-600 text-white font-bold text-[9px] flex items-center justify-center">
                 {unreadCount > 9 ? '9+' : unreadCount}
@@ -317,6 +342,30 @@ export function TopBar({ onToggleSidebar }: TopBarProps) {
                     </div>
                   ))
                 )}
+=======
+            <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-red-500" />
+          </button>
+
+          {showNotifications && (
+            <div className="absolute top-full right-0 mt-1.5 w-80 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in zoom-in-95 duration-100">
+              <div className="px-3.5 py-1.5 border-b border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-semibold text-slate-800">In-App Notifications</span>
+                <span className="text-[10px] bg-blue-100 text-[#17365D] font-bold px-1.5 py-0.5 rounded">
+                  2 New
+                </span>
+              </div>
+              <div className="divide-y divide-slate-100 max-h-64 overflow-y-auto">
+                <div className="p-3 text-xs hover:bg-slate-50 cursor-pointer">
+                  <p className="font-semibold text-slate-800">Company Profile Updated</p>
+                  <p className="text-slate-500 text-[11px] mt-0.5">Updated tax identification for Acme Corp.</p>
+                  <span className="text-[10px] text-slate-400 mt-1 block">10 mins ago</span>
+                </div>
+                <div className="p-3 text-xs hover:bg-slate-50 cursor-pointer">
+                  <p className="font-semibold text-slate-800">Phase 0 System Audit Logged</p>
+                  <p className="text-slate-500 text-[11px] mt-0.5">Login recorded for user Alexander Vance.</p>
+                  <span className="text-[10px] text-slate-400 mt-1 block">1 hour ago</span>
+                </div>
+>>>>>>> 4a1448526a9835d6aa52ec14365c16a1afc6f77f
               </div>
             </div>
           )}
