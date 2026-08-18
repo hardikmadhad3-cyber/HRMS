@@ -1,0 +1,6 @@
+{
+  "name": "Human Resource Management System (HRMS)",
+  "description": "Production-grade multi-company HRMS with Organization, Attendance, Leaves, Payroll, Recruitment, Performance, Expenses & Claims, Asset Master & Custody Tracking, and Separation/Offboarding Workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
